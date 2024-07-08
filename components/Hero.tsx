@@ -1,5 +1,6 @@
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { socialMedia } from "@/data";
 
 const Hero = () => {
   return (
@@ -29,9 +30,24 @@ const Hero = () => {
 
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming concepts into seamless Experience"
+            words="Coming Soon"
           />
+
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            An IT Solution Providers all in one Place
+          </p>
         </div>
+      </div>
+
+      <div className="flex justify-center relative my-[350px] mt-0 z-10 md:gap-3 gap-6">
+        {socialMedia.map((info) => (
+          <div
+            key={info.id}
+            className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+          >
+            <img src={info.img} alt="icons" width={20} height={20} />
+          </div>
+        ))}
       </div>
     </div>
   );
