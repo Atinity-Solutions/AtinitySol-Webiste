@@ -1,3 +1,5 @@
+import Clients from "@/components/Clients";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
@@ -8,6 +10,8 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
+        <Clients />
+        <Footer/>
       </div>
     </main>
   );
