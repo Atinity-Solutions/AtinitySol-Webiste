@@ -6,8 +6,8 @@ const Portfolio = () => {
   return (
     <div className="py-20">
       <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        A Small Selection of{" "}
+        <span className="text-purple">Recent Projects</span>
       </h1>
       <PortfolioDetail />
     </div>

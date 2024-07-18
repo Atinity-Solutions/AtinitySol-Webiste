@@ -1,4 +1,4 @@
-import { Clients, Hero, Portfolio } from "@/components";
+import { Clients, Hero, Portfolio, Services } from "@/components";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <Hero />
         <Clients />
+        <Services />
         <Portfolio />
       </div>
     </main>
