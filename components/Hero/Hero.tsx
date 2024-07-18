@@ -1,8 +1,7 @@
 import { FaLocationArrow } from "react-icons/fa";
-import MagicButton from "./ui/MagicButton";
-import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { socialMedia } from "@/data";
+import MagicButton from "../ui/MagicButton";
+import { Spotlight } from "../ui/Spotlight";
+import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import Image from "next/image";
 
 import images from "@/assets/img";

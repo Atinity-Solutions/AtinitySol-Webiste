@@ -1,9 +1,9 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
-import MagicButton from "./ui/MagicButton";
+import MagicButton from "../ui/MagicButton";
 
-const Footer = () => {
+const FooterDetails = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       {/* background grid */}
@@ -54,4 +54,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterDetails;
