@@ -69,41 +69,6 @@ export const gridItems = [
   },
 ];
 
-export const services = [
-  {
-    id: 1,
-    title: "Web Development",
-    des: "Portfolio Website using Next and Three",
-    img: "/p5.png",
-    iconLists: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg", "/three.svg"],
-    link: "",
-  },
-  {
-    id: 2,
-    title: "UI/ UX Design",
-    des: "A Bank app using React and Tailwind",
-    img: "/p6.png",
-    iconLists: ["/re.svg", "/tail.svg"],
-    link: "",
-  },
-  {
-    id: 3,
-    title: "Digital Marketing",
-    des: "A Fitness Gym App using React JS",
-    img: "/p7.png",
-    iconLists: ["/re.svg"],
-    link: "",
-  },
-  {
-    id: 4,
-    title: "Sanity Blog",
-    des: "A Blog website with Sanity",
-    img: "/p8.png",
-    iconLists: ["/re.svg", "/next.svg", "/tail.svg"],
-    link: "",
-  },
-];
-
 export const projects = [
   {
     id: 1,
