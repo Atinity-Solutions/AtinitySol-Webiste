@@ -5,7 +5,7 @@ import { companies } from "@/data";
 const Clients = () => {
   return (
     <div className="pt-3 pb-20">
-      <div className="flex flex-col items-center">
+      <div className="rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={companies}
           direction="left"

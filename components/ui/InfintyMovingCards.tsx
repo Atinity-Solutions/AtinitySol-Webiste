@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -11,9 +12,9 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    name: string;
     nameImg: string;
     img: string; // Added img property
+    link: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -73,7 +74,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-screen md:max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -88,17 +89,19 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className="w-[150px] max-w-full relative rounded-2xl  flex-shrink-0 px-8 py-6 md:w-[150px]"
-            key={item.name}
+            key={item.nameImg}
           >
             <div
               aria-hidden="true"
               className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
             ></div>
-            <img
-              src={item.img}
-              alt={item.name}
-              className="w-10 h-10 rounded-full"
-            />
+            <Link href={item.link} target="_blank">
+              <img
+                src={item.img}
+                alt={item.nameImg}
+                className="w-10 h-10 rounded-full"
+              />
+            </Link>
           </li>
         ))}
       </ul>

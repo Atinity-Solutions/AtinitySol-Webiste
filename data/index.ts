@@ -147,51 +147,61 @@ export const companies = [
     id: 1,
     img: "/cloud.svg",
     nameImg: "/cloudName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
   {
     id: 2,
     img: "/app.svg",
     nameImg: "/appName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
   {
     id: 3,
     img: "/host.svg",
     nameImg: "/hostName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
   {
     id: 4,
     img: "/s.svg",
     nameImg: "/streamName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
   {
     id: 5,
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
   {
     id: 6,
     img: "/cloud.svg",
     nameImg: "/cloudName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
   {
     id: 7,
     img: "/app.svg",
     nameImg: "/appName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
   {
     id: 8,
     img: "/host.svg",
     nameImg: "/hostName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
   {
     id: 9,
     img: "/s.svg",
     nameImg: "/streamName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
   {
     id: 10,
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
+    link: "https://www.instagram.com/atinitysol/",
   },
 ];
 
@@ -234,7 +244,7 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/insta.svg",
     link: "https://www.instagram.com/atinitysol/",
   },
   {
