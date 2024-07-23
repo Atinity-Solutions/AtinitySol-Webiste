@@ -1,23 +1,28 @@
 import CardHoverEffect from "../ui/CardHoverEffect";
-import {
-  PiAppStoreLogo,
-  PiHeadsetFill,
-  PiLock,
-  PiMegaphone,
-  PiMonitor,
-  PiStorefront,
-} from "react-icons/pi";
+import { PiAppStoreLogo, PiMonitor, PiStorefront } from "react-icons/pi";
+
+import { MdDesignServices } from "react-icons/md";
+import { AiOutlineProject } from "react-icons/ai";
+import { SiHostinger } from "react-icons/si";
 
 export const services = [
+  {
+    icon: (
+      <div className="bg-blue-100 p-4 rounded-full">
+        <MdDesignServices className="w-8 h-8 text-blue-600" />
+      </div>
+    ),
+    title: "UI / UX Designing",
+    description: `We bring your digital vision to life with exceptional UI/UX design services, creating visually stunning and user-friendly interfaces.`,
+  },
   {
     icon: (
       <div className="bg-blue-100 p-4 rounded-full">
         <PiMonitor className="w-8 h-8 text-blue-600" />
       </div>
     ),
-    title: "Website Design",
-    description:
-      "We build fully responsive websites that look great on all devices. Our websites are designed to convert visitors into customers.",
+    title: "Web Development",
+    description: `We specialize in crafting custom websites that reflect your brand and deliver a seamless user experience. Our designs ensure both aesthetics and functionality.`,
   },
   {
     icon: (
@@ -25,29 +30,17 @@ export const services = [
         <PiStorefront className="w-8 h-8 text-blue-600" />
       </div>
     ),
-    title: "E-commerce Store",
-    description:
-      "From small stores to large online retailers, we have the expertise to build a store that will help you grow your business.",
+    title: "Digital Marketing",
+    description: `We elevate your brand’s online presence with strategic digital marketing to attract, engage, and convert your target audience, driving business growth.`,
   },
   {
     icon: (
       <div className="bg-blue-100 p-4 rounded-full">
-        <PiLock className="w-8 h-8 text-blue-600" />
+        <AiOutlineProject className="w-8 h-8 text-blue-600" />
       </div>
     ),
-    title: "Authentication",
-    description:
-      "Secure authentication solutions for your website or app. We use the latest technology to keep your data safe.",
-  },
-  {
-    icon: (
-      <div className="bg-blue-100 p-4 rounded-full">
-        <PiMegaphone className="w-8 h-8 text-blue-600" />
-      </div>
-    ),
-    title: "Social Media",
-    description:
-      "We offer social media management and ad creation services. We can help you grow your social media presence and reach new customers.",
+    title: "Project Management",
+    description: `We expertly guide projects from inception to completion, ensuring on-time, on-budget delivery with the highest quality standards.`,
   },
   {
     icon: (
@@ -56,18 +49,16 @@ export const services = [
       </div>
     ),
     title: "App Development",
-    description:
-      "We build custom mobile apps for iOS and Android. Our apps are designed to be user-friendly and performant.",
+    description: `We build custom mobile apps for iOS and Android. Our apps are designed to be user-friendly and performant.`,
   },
   {
     icon: (
       <div className="bg-blue-100 p-4 rounded-full">
-        <PiHeadsetFill className="w-8 h-8 text-blue-600" />
+        <SiHostinger className="w-8 h-8 text-blue-600" />
       </div>
     ),
-    title: "Support",
-    description:
-      "We offer support for all our clients. We are here to help you with any issues or questions you may have.",
+    title: "Hosting Provider",
+    description: `Our comprehensive managed hosting services ensure smooth, secure website or application operation with reliable performance, top-notch security, and expert support.`,
   },
 ];
 

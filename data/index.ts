@@ -1,5 +1,5 @@
 export const navItems = [
-  { name: "About", link: "#about" },
+  { name: "Services", link: "#services" },
   { name: "Projects", link: "#projects" },
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
@@ -107,38 +107,24 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-    img: "/cloud.svg",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Their strategic digital marketing led to significant growth in our market reach. We easily achieved our business objectives. Their approach is both effective and reliable. Highly recommended!",
+    name: "Saqib Khan",
+    title: "CEO Al-Nazaway",
     img: "/host.svg",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "The custom website design they delivered was exceptional. It truly reflects our brand and offers a top-notch user experience. Our customers have been praising it. Outstanding work all around!",
+    name: "Irfan",
+    title: "CEO Morada Construction",
     img: "/app.svg",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Their managed hosting services ensure our website operates smoothly and securely. We benefit from reliable performance and expert support. It allows us to focus on our business. Excellent service!",
+    name: "M. Ahmed Ali Asim",
+    title: "Manager Rotana Travels",
     img: "/s.svg",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-    img: "/dock.svg",
   },
 ];
 
