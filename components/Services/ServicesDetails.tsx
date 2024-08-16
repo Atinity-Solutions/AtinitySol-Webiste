@@ -1,4 +1,4 @@
-import CardHoverEffect from "../ui/CardHoverEffect";
+import { HoverEffect } from "../ui/card-hover-effect";
 import { PiAppStoreLogo, PiMonitor, PiStorefront } from "react-icons/pi";
 
 import { MdDesignServices } from "react-icons/md";
@@ -65,7 +65,7 @@ export const services = [
 const ServicesDetails = () => {
   return (
     <div className="max-w-5xl mx-auto px-8">
-      <CardHoverEffect items={services} />
+      <HoverEffect items={services} />
     </div>
   );
 };

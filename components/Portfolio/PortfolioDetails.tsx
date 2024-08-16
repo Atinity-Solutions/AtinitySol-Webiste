@@ -3,7 +3,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
 import { projects } from "@/data";
-import { PinContainer } from "../ui/Pin";
+import { PinContainer } from "../ui/3d-pin";
 import Link from "next/link";
 
 const PortfolioDetail = () => {
@@ -56,7 +56,7 @@ const PortfolioDetail = () => {
 
               <div className="flex justify-center items-center">
                 <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                  <Link href={link}>Check Live Site</Link>
+                  Check Live Site
                 </p>
                 <FaLocationArrow className="ms-3" color="#CBACF9" />
               </div>

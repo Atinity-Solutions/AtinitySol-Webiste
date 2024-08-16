@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-const CardHoverEffect = ({
+export const HoverEffect = ({
   items,
   className,
 }: {
@@ -109,5 +109,3 @@ export const CardDescription = ({
     </p>
   );
 };
-
-export default CardHoverEffect;

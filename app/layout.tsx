@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-import { Footer, Navbar } from "@/components";
-import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Atinity Solution",
+  title: "Atinity Solutions",
   description: "Company Website",
   icons: {
     icon: ["./favicon.ico"],
@@ -32,7 +32,6 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
-          <ScrollToTopButton />
           <Footer />
         </ThemeProvider>
       </body>
