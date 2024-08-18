@@ -2,14 +2,14 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { projects } from "@/data";
+import { portfolio } from "@/data";
 import { PinContainer } from "../ui/3d-pin";
 import Link from "next/link";
 
 const PortfolioDetail = () => {
   return (
     <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-      {projects.map(({ id, title, des, img, iconLists, link }) => (
+      {portfolio.map(({ id, title, des, img, iconLists, link }) => (
         <div
           className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
           key={id}

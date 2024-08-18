@@ -68,7 +68,7 @@ export const gridItems = [
   },
 ];
 
-export const projects = [
+export const portfolio = [
   {
     id: 1,
     title: "Portfolio Website",
@@ -76,6 +76,7 @@ export const projects = [
     img: "/p5.png",
     iconLists: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg", "/three.svg"],
     link: "https://asjal-portfolio-8ot16to9w-asjal8.vercel.app/",
+    githubLink: "",
   },
   {
     id: 2,
@@ -84,6 +85,7 @@ export const projects = [
     img: "/p6.png",
     iconLists: ["/re.svg", "/tail.svg"],
     link: "https://bank-iqktinhrt-asjal8.vercel.app/",
+    githubLink: "https://github.com/Asjal8/Bank_App.git",
   },
   {
     id: 3,
@@ -92,6 +94,7 @@ export const projects = [
     img: "/p7.png",
     iconLists: ["/re.svg"],
     link: "https://fitnessclub-pv60whtqy-asjal8.vercel.app/",
+    githubLink: "https://github.com/Asjal8/Fitness-Club.git",
   },
   {
     id: 4,
@@ -99,7 +102,47 @@ export const projects = [
     des: "A Blog website with Sanity",
     img: "/p8.png",
     iconLists: ["/re.svg", "/next.svg", "/tail.svg"],
+    link: "https://nextjs-sanity-blog-website-709dvfe7s-asjal8.vercel.app/",
+    githubLink: "https://github.com/Asjal8/NextJS-Sanity-Blog-Website.git",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Portfolio Website",
+    des: "Portfolio Website using Next and Three",
+    img: "/p5.png",
+    iconLists: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg", "/three.svg"],
+    link: "https://asjal-portfolio-8ot16to9w-asjal8.vercel.app/",
+    githubLink: "",
+  },
+  {
+    id: 2,
+    title: "Bank App",
+    des: "A Bank app using React and Tailwind",
+    img: "/p6.png",
+    iconLists: ["/re.svg", "/tail.svg"],
+    link: "https://bank-iqktinhrt-asjal8.vercel.app/",
+    githubLink: "https://github.com/Asjal8/Bank_App.git",
+  },
+  {
+    id: 3,
+    title: "Fitness App",
+    des: "A Fitness Gym App using React JS",
+    img: "/p7.png",
+    iconLists: ["/re.svg"],
     link: "https://fitnessclub-pv60whtqy-asjal8.vercel.app/",
+    githubLink: "https://github.com/Asjal8/Fitness-Club.git",
+  },
+  {
+    id: 4,
+    title: "Sanity Blog",
+    des: "A Blog website with Sanity",
+    img: "/p8.png",
+    iconLists: ["/re.svg", "/next.svg", "/tail.svg"],
+    link: "https://nextjs-sanity-blog-website-709dvfe7s-asjal8.vercel.app/",
+    githubLink: "https://github.com/Asjal8/NextJS-Sanity-Blog-Website.git",
   },
 ];
 

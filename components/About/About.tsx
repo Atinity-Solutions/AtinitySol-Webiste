@@ -1,11 +1,6 @@
-import { FaLocationArrow } from "react-icons/fa";
-import MagicButton from "../ui/magic-button";
-import { Spotlight } from "../ui/spotlight";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
-import Image from "next/image";
+"use client";
 
-import images from "@/assets/img";
-import Link from "next/link";
+import { Spotlight } from "../ui/spotlight";
 import AboutDetails from "./AboutDetails";
 import OurTeam from "../OurTeam/OurTeam";
 
