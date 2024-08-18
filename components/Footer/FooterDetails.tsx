@@ -2,6 +2,10 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
 import MagicButton from "../ui/magic-button";
+import Image from "next/image";
+
+import images from "@/assets/img";
+import Link from "next/link";
 
 const FooterDetails = () => {
   return (
@@ -23,7 +27,7 @@ const FooterDetails = () => {
         >
           Ready to take digital presence to the next level?
         </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
+        <p className="text-white-200 md:mt-10 text-center">
           Reach out to us today and let&apos;s discuss how We can help you
           achieve your goals.
         </p>
@@ -36,9 +40,18 @@ const FooterDetails = () => {
         </a>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Atinity Solutions
-        </p>
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+          <Link href="/">
+            <Image
+              src={images.LightThemeLogo2}
+              alt="logo"
+              className="w-20 h-20 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg mb-5"
+            />
+          </Link>
+          <p className="md:text-base text-sm md:font-normal font-light">
+            Copyright © 2024 Atinity Solutions
+          </p>
+        </div>
 
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((info) => (

@@ -6,10 +6,12 @@ import Image from "next/image";
 
 import images from "@/assets/img";
 import Link from "next/link";
+import AboutDetails from "./AboutDetails";
+import OurTeam from "../OurTeam/OurTeam";
 
 const About = () => {
   return (
-    <div className="pb-[5px] pt-36">
+    <div className="pb-[5px] pt-20">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -26,37 +28,21 @@ const About = () => {
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
+      <div
+        className="relative max-w-5xl mx-auto py-20"
+        data-aos="zoom-in"
+        data-aos-delay="500"
+      >
+        <h1
+          className="text-4xl pb-5 md:text-7xl text-center
+         bg-clip-text text-transparent bg-gradient-to-b
+          from-blue-500 to-neutral-50 bg-opacity-50 mt-20"
+        >
+          About Us
+        </h1>
 
-      <div className="flex justify-center relative my-1 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <Link href="/">
-            <Image
-              src={images.LightThemeLogo2}
-              alt="logo"
-              className="size-[100px] my-7"
-            />
-          </Link>
-          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Atinity Solutions Pvt Ltd.
-          </h2>
-
-          <TextGenerateEffect
-            className="text-center text-4xl md:text-7xl lg:text-9xl"
-            words="Empowering Digital Innovation, At Infinity and Beyond"
-          />
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            An IT Solution Providers all in one Place
-          </p>
-
-          <a href="mailto:info@atinitysol.com">
-            <MagicButton
-              title="Book a Call"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
-        </div>
+        <AboutDetails />
+        <OurTeam />
       </div>
     </div>
   );

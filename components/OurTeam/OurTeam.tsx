@@ -1,8 +1,8 @@
 "use client";
 
-import PortfolioDetail from "./PortfolioDetails";
+import OurTeamDetails from "./OurTeamDetails";
 
-const Portfolio = () => {
+const OurTeam = () => {
   return (
     <div
       className="max-w-5xl mx-auto py-20"
@@ -14,12 +14,12 @@ const Portfolio = () => {
          bg-clip-text text-transparent bg-gradient-to-b
           from-blue-500 to-neutral-50 bg-opacity-50 mt-20"
       >
-        A Small Selection of Recent Projects
+        Our Team
       </h1>
 
-      <PortfolioDetail />
+      <OurTeamDetails />
     </div>
   );
 };
 
-export default Portfolio;
+export default OurTeam;

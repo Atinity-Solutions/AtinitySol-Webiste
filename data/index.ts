@@ -105,22 +105,19 @@ export const projects = [
 
 export const testimonials = [
   {
-    quote:
-      "Their strategic digital marketing led to significant growth in our market reach. We easily achieved our business objectives. Their approach is both effective and reliable. Highly recommended!",
+    body: "Their strategic digital marketing led to significant growth in our market reach. We easily achieved our business objectives. Their approach is both effective and reliable. Highly recommended!",
     name: "Saqib Khan",
     title: "CEO Al-Nazaway",
     img: "/host.svg",
   },
   {
-    quote:
-      "The custom website design they delivered was exceptional. It truly reflects our brand and offers a top-notch user experience. Our customers have been praising it. Outstanding work all around!",
+    body: "The custom website design they delivered was exceptional. It truly reflects our brand and offers a top-notch user experience. Our customers have been praising it. Outstanding work all around!",
     name: "Irfan",
     title: "CEO Morada Construction",
     img: "/app.svg",
   },
   {
-    quote:
-      "Their managed hosting services ensure our website operates smoothly and securely. We benefit from reliable performance and expert support. It allows us to focus on our business. Excellent service!",
+    body: "Their managed hosting services ensure our website operates smoothly and securely. We benefit from reliable performance and expert support. It allows us to focus on our business. Excellent service!",
     name: "M. Ahmed Ali Asim",
     title: "Manager Rotana Travels",
     img: "/s.svg",
@@ -236,5 +233,89 @@ export const socialMedia = [
     id: 3,
     img: "/link.svg",
     link: "https://www.linkedin.com/company/atinity-sol",
+  },
+];
+
+export const whyus = [
+  {
+    title: "Collaborative Editing",
+    description:
+      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+  },
+  {
+    title: "Real time changes",
+    description:
+      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+  },
+  {
+    title: "Version control",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+  },
+  {
+    title: "Running out of content",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+  },
+];
+
+export const iconCloud = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "firebase",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "cypress",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
+  "figma",
+];
+
+export const ourTeam = [
+  {
+    image: "",
+    name: "Arsalan Javed",
+    position: "CEO",
+  },
+  {
+    image: "",
+    name: "Asjal Abrar",
+    position: "CTO",
+  },
+  {
+    image: "",
+    name: "M. Sarmad Abdullah",
+    position: "CFO",
+  },
+  {
+    image: "",
+    name: "Saif Irshad",
+    position: "CMO",
+  },
+  {
+    image: "",
+    name: "Mufti Anees",
+    position: "CHRM",
   },
 ];
