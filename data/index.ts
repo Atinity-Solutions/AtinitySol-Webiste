@@ -283,6 +283,7 @@ export const ourApproach = [
     des: "fffadsfdasdfasfdasafds",
     img: "/insta.svg",
     iconBg: "#383E56",
+    date: "2024",
   },
   {
     id: 2,
@@ -290,6 +291,7 @@ export const ourApproach = [
     des: "fffadsfdasdfasfdasafdsfffadsfdasdfasfdasafds",
     img: "/insta.svg",
     iconBg: "#383E56",
+    date: "2024",
   },
   {
     id: 3,
@@ -297,6 +299,7 @@ export const ourApproach = [
     des: "fffadsfdasdfasfdasafds",
     img: "/insta.svg",
     iconBg: "#383E56",
+    date: "2024",
   },
   {
     id: 4,
@@ -304,6 +307,7 @@ export const ourApproach = [
     des: "fffadsfdasdfasfdasafds",
     img: "/insta.svg",
     iconBg: "#383E56",
+    date: "2024",
   },
   {
     id: 5,
@@ -311,5 +315,6 @@ export const ourApproach = [
     des: "fffadsfdasdfasfdasafds",
     img: "/insta.svg",
     iconBg: "#383E56",
+    date: "2024",
   },
 ];
