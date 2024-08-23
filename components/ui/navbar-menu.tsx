@@ -17,12 +17,12 @@ export const MenuItem = ({
   setActive,
   active,
   item,
-  children,
+  navItems,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
-  children?: React.ReactNode;
+  navItems: any; // type this
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
@@ -32,7 +32,7 @@ export const MenuItem = ({
       >
         {item}
       </motion.p>
-      {active !== null && children && (
+      {active !== null && (navItems.Projects || navItems.Services) && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -49,7 +49,31 @@ export const MenuItem = ({
                   layout // layout ensures smooth animation
                   className="w-max h-full p-4"
                 >
-                  {children}
+                  {navItems.Projects && (
+                    <div className="ftext-sm grid grid-cols-2 gap-10 p-4">
+                      {navItems.Projects.map((projects: any) => (
+                        <div key={projects.id}>
+                          <ProductItem
+                            title={projects.title}
+                            href={projects.link}
+                            src={projects.img}
+                            description={projects.des}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {navItems.Services && (
+                    <div className="flex flex-col space-y-5 text-sm">
+                      {navItems.Services.map((services: any) => (
+                        <div key={services.id}>
+                          <HoveredLink href={services.link}>
+                            {services.name}
+                          </HoveredLink>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </motion.div>
               </motion.div>
             </div>
