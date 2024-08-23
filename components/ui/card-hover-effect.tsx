@@ -1,16 +1,18 @@
-import { cn } from "@/lib/utils";
+import { IconType } from "react-icons"; // Import IconType
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export const HoverEffect = ({
   items,
   className,
 }: {
   items: {
-    icon: React.ReactNode;
+    icon: IconType; // Change icon type to IconType
     title: string;
     description: string;
+    link: string;
   }[];
   className?: string;
 }) => {
@@ -24,8 +26,9 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <div
-          key={item?.title}
+        <Link
+          href={item?.link}
+          key={item?.link}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -48,11 +51,15 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <div className="flex items-center">{item.icon}</div>
+            <div className="flex items-center">
+              <div className="bg-blue-100 p-4 rounded-full">
+                {item.icon && <item.icon className="w-8 h-8 text-blue-600" />}
+              </div>
+            </div>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
-        </div>
+        </Link>
       ))}
     </div>
   );

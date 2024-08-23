@@ -4,9 +4,9 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { portfolio } from "@/data";
 import { PinContainer } from "../ui/3d-pin";
-import Link from "next/link";
+import Image from "next/image";
 
-const PortfolioDetail = () => {
+const PortfolioDetails = () => {
   return (
     <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
       {portfolio.map(({ id, title, des, img, iconLists, link }) => (
@@ -20,9 +20,15 @@ const PortfolioDetail = () => {
                 className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                 style={{ backgroundColor: "#13162D" }}
               >
-                <img src="/bg.png" alt="bgimg" />
+                <Image src="/bg.png" alt="bgimg" width={400} height={400} />
               </div>
-              <img src={img} alt="cover" className="z-10 absolute bottom-0" />
+              <Image
+                src={img}
+                alt="cover"
+                className="z-10 absolute bottom-0 "
+                width={400}
+                height={400}
+              />
             </div>
 
             <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -49,7 +55,13 @@ const PortfolioDetail = () => {
                       transform: `translateX(-${5 * index + 2}px)`,
                     }}
                   >
-                    <img src={icon} alt="icon5" className="p-2" />
+                    <Image
+                      src={icon}
+                      alt="icon5"
+                      className="p-2"
+                      width={100}
+                      height={100}
+                    />
                   </div>
                 ))}
               </div>
@@ -68,4 +80,4 @@ const PortfolioDetail = () => {
   );
 };
 
-export default PortfolioDetail;
+export default PortfolioDetails;

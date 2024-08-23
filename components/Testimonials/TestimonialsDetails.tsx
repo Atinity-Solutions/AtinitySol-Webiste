@@ -40,12 +40,25 @@ const ReviewCard = ({
 export function TestimonialsDetails() {
   return (
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  md:shadow-xl">
-      <Marquee pauseOnHover className="[--duration:20s]">
+      <Marquee
+        pauseOnHover
+        className="[--duration:20s]"
+        data-aos="zoom-in-left"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine"
+      >
         {firstRow.map((testimonials) => (
           <ReviewCard key={testimonials.title} {...testimonials} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
+      <Marquee
+        reverse
+        pauseOnHover
+        className="[--duration:20s]"
+        data-aos="zoom-in-right"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine"
+      >
         {secondRow.map((testimonials) => (
           <ReviewCard key={testimonials.title} {...testimonials} />
         ))}
