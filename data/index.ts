@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { PiAppStoreLogo, PiMonitor, PiStorefront } from "react-icons/pi";
 
 import { MdDesignServices } from "react-icons/md";
@@ -316,5 +318,50 @@ export const ourApproach = [
     img: "/insta.svg",
     iconBg: "#383E56",
     date: "2024",
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    title: "UI / UX Designing",
+    description: `We bring your digital vision to life with exceptional UI/UX design services, creating visually stunning and user-friendly interfaces.`,
+    img: "/bg.png",
+    link: "/",
+  },
+  {
+    id: 2,
+    title: "Web Development",
+    description: `We specialize in crafting custom websites that reflect your brand and deliver a seamless user experience. Our designs ensure both aesthetics and functionality.`,
+    img: "/bg.png",
+    link: "/",
+  },
+  {
+    id: 3,
+    title: "Digital Marketing",
+    description: `We elevate your brand’s online presence with strategic digital marketing to attract, engage, and convert your target audience, driving business growth.`,
+    img: "/bg.png",
+    link: "/",
+  },
+  {
+    id: 4,
+    title: "Project Management",
+    description: `We expertly guide projects from inception to completion, ensuring on-time, on-budget delivery with the highest quality standards.`,
+    img: "/bg.png",
+    link: "/",
+  },
+  {
+    id: 5,
+    title: "App Development",
+    description: `We build custom mobile apps for iOS and Android. Our apps are designed to be user-friendly and performant.`,
+    img: "/bg.png",
+    link: "/",
+  },
+  {
+    id: 6,
+    title: "Hosting Provider",
+    description: `Our comprehensive managed hosting services ensure smooth, secure website or application operation with reliable performance, top-notch security, and expert support.`,
+    img: "/bg.png",
+    link: "/",
   },
 ];
