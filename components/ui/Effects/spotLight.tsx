@@ -1,8 +1,8 @@
 "use client";
 
-import { Spotlight } from "../ui/spotlight";
+import { Spotlight } from "@/components/ui/spotlight";
 
-const HeroSpotLight = () => {
+const SpotLight = () => {
   return (
     <div>
       <Spotlight
@@ -15,4 +15,4 @@ const HeroSpotLight = () => {
   );
 };
 
-export default HeroSpotLight;
+export default SpotLight;

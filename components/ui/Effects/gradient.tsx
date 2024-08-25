@@ -1,6 +1,6 @@
 "use client";
 
-const HeroGradient = () => {
+const Gradient = () => {
   return (
     <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-dot-white/[0.1] bg-dot-black/[0.2] flex items-center justify-center absolute top-0 left-0">
       {/* Radial gradient for the container to give a faded look */}
@@ -9,4 +9,4 @@ const HeroGradient = () => {
   );
 };
 
-export default HeroGradient;
+export default Gradient;

@@ -1,3 +1,5 @@
+"use client";
+
 import { IconType } from "react-icons"; // Import IconType
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";

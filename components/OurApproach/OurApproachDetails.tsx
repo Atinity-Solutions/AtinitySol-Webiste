@@ -15,13 +15,14 @@ const OurApproachDetails = () => {
     <VerticalTimeline>
       {ourApproach.map((approach) => (
         <VerticalTimelineElement
+          visible={true}
           key={approach.id}
           contentStyle={{
             background: "#1d1836",
             color: "#fff",
           }}
           contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-          date={approach.date}
+          date={approach.title}
           iconStyle={{ background: "#fff" }}
           icon={
             <div className="flex justify-center items-center w-full h-full">

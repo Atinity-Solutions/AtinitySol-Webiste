@@ -1,10 +1,32 @@
 "use client";
 
+import React from "react";
 import { FaLocationArrow } from "react-icons/fa6";
-
-import { portfolio } from "@/data";
+import { portfolio, techStack } from "@/data";
 import { PinContainer } from "../ui/3d-pin";
 import Image from "next/image";
+
+type PortfolioItem = {
+  id: number;
+  title: string;
+  des: string;
+  img: string;
+  iconLists: number[];
+  link: string;
+  githubLink?: string;
+};
+
+type Tech = {
+  id: number;
+  src: string;
+  alt: string;
+};
+
+function getTechStackIcons(ids: number[], techStack: Tech[]): Tech[] {
+  return ids
+    .map((id) => techStack.find((tech) => tech.id === id))
+    .filter((tech) => tech !== undefined) as Tech[];
+}
 
 const PortfolioDetails = () => {
   return (
@@ -25,7 +47,7 @@ const PortfolioDetails = () => {
               <Image
                 src={img}
                 alt="cover"
-                className="z-10 absolute bottom-0 "
+                className="z-10 absolute bottom-0"
                 width={400}
                 height={400}
               />
@@ -47,17 +69,14 @@ const PortfolioDetails = () => {
 
             <div className="flex items-center justify-between mt-7 mb-3">
               <div className="flex items-center">
-                {iconLists.map((icon, index) => (
+                {getTechStackIcons(iconLists, techStack).map((tech) => (
                   <div
-                    key={index}
+                    key={tech.id}
                     className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                    style={{
-                      transform: `translateX(-${5 * index + 2}px)`,
-                    }}
                   >
                     <Image
-                      src={icon}
-                      alt="icon5"
+                      src={tech.src}
+                      alt={tech.alt}
                       className="p-2"
                       width={100}
                       height={100}
@@ -67,10 +86,15 @@ const PortfolioDetails = () => {
               </div>
 
               <div className="flex justify-center items-center">
-                <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-purple text-sm lg:text-xl"
+                >
                   Check Live Site
-                </p>
-                <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                </a>
               </div>
             </div>
           </PinContainer>

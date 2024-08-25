@@ -22,8 +22,6 @@ export default function Home() {
         <Hero />
         <OurServices />
         <Portfolio />
-        <OurApproach />
-        <Testimonials />
       </div>
     </main>
   );

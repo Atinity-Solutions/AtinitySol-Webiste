@@ -1,52 +1,89 @@
 "use client";
+
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { navItems } from "@/data";
+import { navItems, services, portfolio } from "@/data";
+
+type NavItem = {
+  id: number;
+  title: string;
+  link: string;
+  dropdown?: number[];
+};
+
+type Service = {
+  id: number;
+  title: string;
+  link: string;
+};
+
+type Project = {
+  id: number;
+  title: string;
+  des: string;
+  img: string;
+  link: string;
+};
+
+function getDropdownItems<T>(ids: number[], items: T[]): T[] {
+  return ids
+    .map((id) => items.find((item) => (item as any).id === id))
+    .filter((item) => item !== undefined) as T[];
+}
 
 export function Navigation({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+
   return (
     <div
       className={cn(
-        "hidden lg:block fixed top-10 inset-x-0 max-w-2xl mx-auto z-50",
+        "hidden lg:block fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 ",
         className
       )}
     >
       <Menu setActive={setActive}>
-        {navItems.map((navItems) => (
-          <div key={navItems.id}>
-            <Link href={navItems.link}>
+        {navItems.map((navItem: NavItem) => (
+          <div key={navItem.id}>
+            <Link href={navItem.link}>
               <MenuItem
                 setActive={setActive}
                 active={active}
-                item={navItems.name}
+                item={navItem.title}
               >
-                {navItems.Projects && (
-                  <div className="ftext-sm grid grid-cols-2 gap-10 p-4">
-                    {navItems.Projects.map((projects) => (
-                      <div key={projects.id}>
-                        <ProductItem
-                          title={projects.title}
-                          href={projects.link}
-                          src={projects.img}
-                          description={projects.des}
-                        />
+                {navItem.dropdown && (
+                  <div className="text-sm">
+                    {navItem.title === "Projects" && (
+                      <div className="grid grid-cols-2 gap-10 p-4">
+                        {getDropdownItems(navItem.dropdown, portfolio).map(
+                          (portfolio: Project) => (
+                            <div key={portfolio.id}>
+                              <ProductItem
+                                title={portfolio.title}
+                                href={portfolio.link}
+                                src={portfolio.img}
+                                description={portfolio.des}
+                              />
+                            </div>
+                          )
+                        )}
                       </div>
-                    ))}
-                  </div>
-                )}
+                    )}
 
-                {navItems.Services && (
-                  <div className="flex flex-col space-y-5 text-sm">
-                    {navItems.Services.map((services) => (
-                      <div key={services.id}>
-                        <HoveredLink href={services.link}>
-                          {services.name}
-                        </HoveredLink>
+                    {navItem.title === "Services" && (
+                      <div className="flex flex-col space-y-5 text-sm">
+                        {getDropdownItems(navItem.dropdown, services).map(
+                          (service: Service) => (
+                            <div key={service.id}>
+                              <HoveredLink href={service.link}>
+                                {service.title}
+                              </HoveredLink>
+                            </div>
+                          )
+                        )}
                       </div>
-                    ))}
+                    )}
                   </div>
                 )}
               </MenuItem>

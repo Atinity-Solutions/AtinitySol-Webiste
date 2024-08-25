@@ -1,18 +1,18 @@
 "use client";
 
-import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import HeroContact from "./HeroContact";
 import { HeroGlobe } from "./HeroGlobe";
-import HeroGradient from "./HeroGradient";
 import HeroLogo from "./HeroLogo";
-import HeroSpotLight from "./HeroSpotLight";
+import Gradient from "@/components/ui/Effects/gradient";
+import SpotLight from "@/components/ui/Effects/spotLight";
 
 const Hero = () => {
   return (
     <div className="pb-[5px] pt-36">
-      <HeroSpotLight />
+      <SpotLight />
 
-      <HeroGradient />
+      <Gradient />
 
       <div className="flex justify-center relative my-1 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
