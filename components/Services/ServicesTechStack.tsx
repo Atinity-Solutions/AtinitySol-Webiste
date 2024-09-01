@@ -1,25 +1,28 @@
 "use client";
 
 import React from "react";
-import { Tabs } from "../ui/tabs";
+import { Tabs, Tab } from "../ui/tabs";
 import { ourTechnology, techStack } from "@/data";
+import Image from "next/image";
 
 const ServicesTechStack = () => {
   // Convert `ourTechnology` to the format expected by `Tabs`
-  const tabs = ourTechnology.map((tech) => ({
+  const tabs: Tab<{}>[] = ourTechnology.map((tech) => ({
     id: tech.id,
     title: tech.title,
     value: tech.value,
     content: (
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-y-11 gap-x-0 max-w-5xl mx-auto">
+      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
         {tech.logos.map((logoId) => {
           const logo = techStack.find((item) => item.id === logoId);
           return (
             <div key={logoId} className="relative w-10 h-10 mx-auto">
-              <img
+              <Image
                 src={logo?.src || ""}
                 alt={logo?.alt || ""}
                 className="h-full w-full object-contain"
+                width={96} // Adjusted size to match w-24 and h-24
+                height={96} // Adjusted size to match w-24 and h-24
               />
             </div>
           );

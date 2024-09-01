@@ -5,11 +5,11 @@ import { useEffect } from "react";
 // import aos
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Hero from "@/components/Hero/Hero";
-import Testimonials from "@/components/Testimonials/Testimonials";
-import OurServices from "@/components/OurServices/OurServices";
-import Portfolio from "@/components/Portfolio/Portfolio";
-import OurApproach from "@/components/OurApproach/OurApproach";
+import Hero from "@/components/HomePage/Hero/Hero";
+import OurServices from "@/components/HomePage/OurServices/OurServices";
+import AboutUs from "@/components/HomePage/AboutUs/AboutUs";
+import Portfolio from "@/components/HomePage/Portfolio/Portfolio";
+import WhyUs from "@/components/HomePage/WhyUs/WhyUs";
 
 export default function Home() {
   useEffect(() => {
@@ -21,7 +21,9 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <Hero />
         <OurServices />
+        <AboutUs />
         <Portfolio />
+        <WhyUs />
       </div>
     </main>
   );

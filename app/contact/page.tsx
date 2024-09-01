@@ -6,10 +6,9 @@ import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
+    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full">
+      <div className="w-full px-5 sm:px-10">
         <SpotLight />
-
         <Gradient />
         <Contact />
       </div>

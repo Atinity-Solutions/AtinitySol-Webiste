@@ -12,6 +12,7 @@ import {
   PaginationNext,
 } from "@/components/ui/pagination";
 import { portfolio, projectTab } from "@/data";
+import Image from "next/image";
 
 // Define the ProjectTab type
 type ProjectTab = {
@@ -23,7 +24,7 @@ type ProjectTab = {
 
 const ProjectsDetails = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 10;
+  const projectsPerPage = 3;
   const [currentTab, setCurrentTab] = useState<ProjectTab>(projectTab[0]);
 
   // Reset pagination when currentTab changes
@@ -50,8 +51,8 @@ const ProjectsDetails = () => {
     value: tab.value,
     extraData: tab, // Ensure `extraData` contains the full tab information
     content: (
-      <div>
-        <CardContainer className="inter-var grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-20">
+      <div className="w-full">
+        <CardContainer className="inter-var grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {tab.projects
             .slice(
               (currentPage - 1) * projectsPerPage,
@@ -62,13 +63,15 @@ const ProjectsDetails = () => {
               return (
                 <CardBody
                   key={projectId}
-                  className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border"
+                  className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border"
                 >
                   <CardItem translateZ="100" className="w-full mt-4">
-                    <img
+                    <Image
                       src={project?.img || ""}
                       alt="thumbnail"
                       className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                      width={500}
+                      height={500}
                     />
                   </CardItem>
                   <CardItem
@@ -85,7 +88,7 @@ const ProjectsDetails = () => {
                     {project?.des}
                   </CardItem>
 
-                  <div className="flex justify-between items-center mt-20">
+                  <div className="flex justify-between items-center mt-4">
                     <CardItem
                       translateZ={20}
                       as="a"
@@ -102,7 +105,7 @@ const ProjectsDetails = () => {
         </CardContainer>
 
         {/* Pagination */}
-        <Pagination className="mt-6">
+        <Pagination className="mt-6 flex justify-center">
           <PaginationContent>
             <PaginationPrevious
               onClick={handlePrevPage}
@@ -133,7 +136,7 @@ const ProjectsDetails = () => {
   }));
 
   return (
-    <div className="relative max-w-5xl mx-auto py-20">
+    <div className="relative w-full py-20">
       <Tabs
         tabs={tabs}
         containerClassName="inter-var"

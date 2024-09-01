@@ -1,34 +1,35 @@
 "use client";
 
 import React from "react";
-import { FaLocationArrow } from "react-icons/fa6";
+import { PinContainer } from "@/components/ui/3d-pin";
+import { FaLocationArrow } from "react-icons/fa";
 import { portfolio, techStack } from "@/data";
-import { PinContainer } from "../ui/3d-pin";
 import Image from "next/image";
 
-type PortfolioItem = {
-  id: number;
-  title: string;
-  des: string;
-  img: string;
-  iconLists: number[];
-  link: string;
-  githubLink?: string;
-};
-
-type Tech = {
+interface Tech {
   id: number;
   src: string;
   alt: string;
-};
-
-function getTechStackIcons(ids: number[], techStack: Tech[]): Tech[] {
-  return ids
-    .map((id) => techStack.find((tech) => tech.id === id))
-    .filter((tech) => tech !== undefined) as Tech[];
 }
 
 const PortfolioDetails = () => {
+  // Helper function to get tech stack icons
+  const getTechStackIcons = (iconIds: number[]) => {
+    return iconIds.map((iconId) => {
+      const tech = techStack.find((tech: Tech) => tech.id === iconId);
+      return tech ? (
+        <Image
+          key={tech.id}
+          src={tech.src}
+          alt={tech.alt}
+          className="p-2"
+          width={40}
+          height={40}
+        />
+      ) : null;
+    });
+  };
+
   return (
     <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
       {portfolio.map(({ id, title, des, img, iconLists, link }) => (
@@ -42,14 +43,19 @@ const PortfolioDetails = () => {
                 className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                 style={{ backgroundColor: "#13162D" }}
               >
-                <Image src="/bg.png" alt="bgimg" width={400} height={400} />
+                <Image
+                  src="/bg.png"
+                  alt="background image"
+                  width={500}
+                  height={500}
+                />
               </div>
               <Image
                 src={img}
-                alt="cover"
+                alt="portfolio cover"
                 className="z-10 absolute bottom-0"
-                width={400}
-                height={400}
+                width={500}
+                height={500}
               />
             </div>
 
@@ -69,32 +75,14 @@ const PortfolioDetails = () => {
 
             <div className="flex items-center justify-between mt-7 mb-3">
               <div className="flex items-center">
-                {getTechStackIcons(iconLists, techStack).map((tech) => (
-                  <div
-                    key={tech.id}
-                    className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                  >
-                    <Image
-                      src={tech.src}
-                      alt={tech.alt}
-                      className="p-2"
-                      width={100}
-                      height={100}
-                    />
-                  </div>
-                ))}
+                {getTechStackIcons(iconLists)}
               </div>
 
               <div className="flex justify-center items-center">
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-purple text-sm lg:text-xl"
-                >
+                <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                   Check Live Site
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </a>
+                </p>
+                <FaLocationArrow className="ms-3" color="#CBACF9" />
               </div>
             </div>
           </PinContainer>
